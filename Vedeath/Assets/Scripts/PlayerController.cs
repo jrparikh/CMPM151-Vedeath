@@ -65,7 +65,7 @@ public class PlayerController : MonoBehaviour
     void shootLaserSound()
     {
         //************* Send the message to the client...
-        OSCHandler.Instance.SendMessageToClient("PD", "/PD/message/soundEffects/longLaser", "/PD/bang");
+        OSCHandler.Instance.SendMessageToClient("PD", "/PD/message/soundEffects/longLaser", "bang");
         //*************
     }
 
