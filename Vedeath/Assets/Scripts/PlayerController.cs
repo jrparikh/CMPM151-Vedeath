@@ -14,8 +14,23 @@ public class PlayerController : MonoBehaviour
     public float speed;
     private Rigidbody2D rb;
 
+    void Start()
+    {
+        //************* Instantiate the OSC Handler...
+        OSCHandler.Instance.Init();
+        OSCHandler.Instance.SendMessageToClient("PD", "/unity/trigger", "ready");
+        //*************
+    }
+
     void FixedUpdate()
     {
+        //************* Routine for receiving the OSC...
+        OSCHandler.Instance.UpdateLogs();
+        Dictionary<string, ServerLog> servers = new Dictionary<string, ServerLog>();
+        servers = OSCHandler.Instance.Servers;
+        //*************
+
+
         float moveHorizontal = Input.GetAxis("Horizontal");
         float moveVertical = Input.GetAxis("Vertical");
 
@@ -32,5 +47,18 @@ public class PlayerController : MonoBehaviour
         );*/
 
         //rb.rotation = Quaternion.Euler(0.0f, 0.0f, rb.velocity.x * -tilt);
+
+        if (Input.GetKey(KeyCode.Mouse0))
+        {
+            shootLaserSound();
+        }
+        
     }
+    void shootLaserSound()
+    {
+        //************* Send the message to the client...
+        OSCHandler.Instance.SendMessageToClient("PD", "/PD/message/soundEffects/bigLaser", 1);
+        //*************
+    }
+
 }
