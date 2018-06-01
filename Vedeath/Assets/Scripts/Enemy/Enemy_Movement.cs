@@ -31,25 +31,30 @@ public class Enemy_Movement: MonoBehaviour {
 
 		if (Time.time > nextMove) {
 			nextMove = Time.time + moveTime;
-			if (viewPos.x < 0.1f){
-				rightMove = true;
-				leftMove = false;
-				enemyTransform.Translate (Vector3.down * downSpeed);
-			}
 			if (rightMove) {
 				enemyTransform.Translate (Vector3.right * movSpeed);
 			}
-			if (viewPos.x > 0.9f) {
-				rightMove = false;
-				leftMove = true;
-				enemyTransform.Translate (Vector3.down * downSpeed);
-			}
-
+		
 			if (leftMove) {
 				enemyTransform.Translate (Vector3.right * -movSpeed);
 			}
 
 			Debug.Log ("Left: " + leftMove + ", Right: " + rightMove);
+		}
+
+		// Down on Left and Right Movement
+		if (viewPos.x < 0.1f && leftMove && !rightMove){
+			rightMove = true;
+			leftMove = false;
+			enemyTransform.Translate (Vector3.down * downSpeed);
+			Debug.Log ("Down Called");
+		}
+		// Down on Right and Left Movement
+		if (viewPos.x > 0.9f && rightMove && !leftMove) {
+			rightMove = false;
+			leftMove = true;
+			enemyTransform.Translate (Vector3.down * downSpeed);
+			Debug.Log ("Down Called");
 		}
 	}
 }

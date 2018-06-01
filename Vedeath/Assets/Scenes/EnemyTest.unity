@@ -203,7 +203,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4684142446465596, guid: a93ca2d66f08147d1be91bded00dab72, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -4
       objectReference: {fileID: 0}
     - target: {fileID: 4684142446465596, guid: a93ca2d66f08147d1be91bded00dab72, type: 2}
       propertyPath: m_LocalPosition.y
@@ -238,6 +238,26 @@ Prefab:
       propertyPath: cam
       value: 
       objectReference: {fileID: 503798853}
+    - target: {fileID: 114363391912365350, guid: a93ca2d66f08147d1be91bded00dab72,
+        type: 2}
+      propertyPath: enemyTransform
+      value: 
+      objectReference: {fileID: 1954259186}
+    - target: {fileID: 114435916648956704, guid: a93ca2d66f08147d1be91bded00dab72,
+        type: 2}
+      propertyPath: movSpeed
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 114435916648956704, guid: a93ca2d66f08147d1be91bded00dab72,
+        type: 2}
+      propertyPath: downSpeed
+      value: 0.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a93ca2d66f08147d1be91bded00dab72, type: 2}
   m_IsPrefabParent: 0
+--- !u!4 &1954259186 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4319396579444618, guid: a93ca2d66f08147d1be91bded00dab72,
+    type: 2}
+  m_PrefabInternal: {fileID: 1696093569}
