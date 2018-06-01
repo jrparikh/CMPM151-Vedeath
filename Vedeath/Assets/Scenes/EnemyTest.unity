@@ -205,6 +205,7 @@ GameObject:
   - component: {fileID: 1959206101}
   - component: {fileID: 1959206103}
   - component: {fileID: 1959206104}
+  - component: {fileID: 1959206105}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -309,3 +310,16 @@ MonoBehaviour:
   cam: {fileID: 503798853}
   moveTime: 1
   movSpeed: 0.125
+  downSpeed: 0
+--- !u!114 &1959206105
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1959206100}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1443b1fa084f24ba695d7c9c135bb02f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyTransform: {fileID: 1959206102}
