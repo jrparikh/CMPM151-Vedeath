@@ -18,8 +18,16 @@ public class PlayerController : MonoBehaviour
     {
         //************* Instantiate the OSC Handler...
         OSCHandler.Instance.Init();
-        OSCHandler.Instance.SendMessageToClient("PD", "/unity/trigger", "ready");
+        OSCHandler.Instance.SendMessageToClient("PD", "/PD/message/oscprep", 1);
+        OSCHandler.Instance.SendMessageToClient("PD", "/PD/message/volume/dimMusic", 1);
+        OSCHandler.Instance.SendMessageToClient("PD", "/PD/message/sequencer/pulse1", 1);
+        OSCHandler.Instance.SendMessageToClient("PD", "/PD/message/sequencer/pulse2", 1);
+        OSCHandler.Instance.SendMessageToClient("PD", "/PD/message/sequencer/waveform3", 1);
+        OSCHandler.Instance.SendMessageToClient("PD", "/PD/message/sequencer/noise4", 1);
+        OSCHandler.Instance.SendMessageToClient("PD", "/PD/message/sequencer/sequencer", 1);
         //*************
+
+
     }
 
     void FixedUpdate()
@@ -48,7 +56,7 @@ public class PlayerController : MonoBehaviour
 
         //rb.rotation = Quaternion.Euler(0.0f, 0.0f, rb.velocity.x * -tilt);
 
-        if (Input.GetKey(KeyCode.Mouse0))
+        if (Input.GetKeyDown(KeyCode.Mouse0))
         {
             shootLaserSound();
         }
@@ -57,7 +65,7 @@ public class PlayerController : MonoBehaviour
     void shootLaserSound()
     {
         //************* Send the message to the client...
-        OSCHandler.Instance.SendMessageToClient("PD", "/PD/message/soundEffects/bigLaser", 1);
+        OSCHandler.Instance.SendMessageToClient("PD", "/PD/message/soundEffects/longLaser", "/PD/bang");
         //*************
     }
 

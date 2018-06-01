@@ -161,7 +161,13 @@
 -define:UNITY_EDITOR_WIN
 -define:ENABLE_NATIVE_ARRAY_CHECKS
 -define:UNITY_TEAM_LICENSE
+Assets/OSC/OSCBundle.cs
+Assets/OSC/OSCClient.cs
+Assets/OSC/OSCMessage.cs
+Assets/OSC/OSCPacket.cs
+Assets/OSC/OSCServer.cs
 Assets/Scripts/Bullet.cs
+Assets/Scripts/OSCHandler.cs
 Assets/Scripts/PlayerController.cs
 Assets/Scripts/Shooting.cs
 -r:"C:\Program Files\Unity\Editor\Data\Mono\lib\mono\unity\System.Runtime.Serialization.dll"

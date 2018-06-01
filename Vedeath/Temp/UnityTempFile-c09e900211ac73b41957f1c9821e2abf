@@ -161,12 +161,12 @@
 -define:UNITY_EDITOR_WIN
 -define:ENABLE_NATIVE_ARRAY_CHECKS
 -define:UNITY_TEAM_LICENSE
+Assets/OSC/OSCBundle.cs
+Assets/OSC/OSCClient.cs
+Assets/OSC/OSCMessage.cs
+Assets/OSC/OSCPacket.cs
+Assets/OSC/OSCServer.cs
 Assets/Scripts/Bullet.cs
-Assets/Scripts/OSC/OSCBundle.cs
-Assets/Scripts/OSC/OSCClient.cs
-Assets/Scripts/OSC/OSCMessage.cs
-Assets/Scripts/OSC/OSCPacket.cs
-Assets/Scripts/OSC/OSCServer.cs
 Assets/Scripts/OSCHandler.cs
 Assets/Scripts/PlayerController.cs
 Assets/Scripts/Shooting.cs
