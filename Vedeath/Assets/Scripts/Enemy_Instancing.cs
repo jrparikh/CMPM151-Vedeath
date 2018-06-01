@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Enemy_Instancing : MonoBehaviour {
-	public Transform enemyTransform;
+	private Transform enemyTransform;
 
 	// Use this for initialization
 	void Start () {
