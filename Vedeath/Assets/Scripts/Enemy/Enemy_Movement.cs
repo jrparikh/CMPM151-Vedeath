@@ -46,8 +46,7 @@ public class Enemy_Movement: MonoBehaviour {
 				enemyContainerTransform.Translate (Vector3.right * -movSpeed);
 			}
 		}
-
-		//Debug.Log (turn);
+			
 		// Down on Left and Right Movement
 		if (viewPos.x < leftBoundary && leftMove && !rightMove){
 			rightMove = true;
@@ -55,26 +54,14 @@ public class Enemy_Movement: MonoBehaviour {
 			enemyContainerTransform.Translate (Vector3.down * downSpeed);
 			moveTime -= 0.05f;
 
-			downTrue = true;
-
-		}
-		if (downTrue) {
-
 		}
 
-		downTrue = false;
-		//Debug.Log (downTrue);
 		// Down on Right and Left Movement
 		if (viewPos.x > rightBoundary && rightMove && !leftMove) {
 			rightMove = false;
 			leftMove = true;
 			enemyContainerTransform.Translate (Vector3.down * downSpeed);
 			moveTime -= 0.05f;
-
-			downTrue = true; 
-			//Debug.Log (downTrue);
 		}
-		downTrue = false;
-		//Debug.Log (downTrue);
 	}
 }

@@ -34,7 +34,7 @@ public class Detect_Down: MonoBehaviour {
 			//leftMove = false;
 			downTrue = true;
 			this.changeDirection = true;
-			Debug.Log ("Change Direction: " + changeDirection);
+			//Debug.Log ("Change Direction: " + changeDirection);
 		}
 
 		// Down on Right and Left Movement
