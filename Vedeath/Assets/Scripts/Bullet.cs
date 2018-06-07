@@ -14,13 +14,13 @@ public class Bullet : MonoBehaviour {
 
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
+        this.rb = GetComponent<Rigidbody2D>();
     }
 
 
     void Update()
     {
-        rb.velocity = new Vector2(VelX, VelY);
+        this.rb.velocity = new Vector2(VelX, VelY);
     }
     
 }

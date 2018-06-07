@@ -14,12 +14,20 @@ public class Enemy_Instancing : MonoBehaviour {
 	void Start () {
 		//enemyTransform = gameObject.GetComponent<Transform> ();
 		for (int i = 0; i < 5; i++) {
-			Instantiate(enemy, new Vector3(i * 0.75f, y, 0), Quaternion.identity, enemyContainer);
-			Instantiate(enemy, new Vector3(i * -0.75f, y, 0), Quaternion.identity, enemyContainer);
+			Instantiate(this.enemy, new Vector3(i * 0.75f, this.y, 0), Quaternion.identity, enemyContainer);
+			Instantiate(this.enemy, new Vector3(i * -0.75f, this.y, 0), Quaternion.identity, enemyContainer);
 
 			//Next Row
-			Instantiate (enemy, new Vector3 (i * 0.75f, y - 1, 0), Quaternion.identity, enemyContainer);
-			Instantiate (enemy, new Vector3 (i * -0.75f, y - 1, 0), Quaternion.identity, enemyContainer);
+			Instantiate (this.enemy, new Vector3 (i * 0.75f, this.y - 1, 0), Quaternion.identity, enemyContainer);
+			Instantiate (this.enemy, new Vector3 (i * -0.75f, this.y - 1, 0), Quaternion.identity, enemyContainer);
+		
+			//Next Row
+			Instantiate (this.enemy, new Vector3 (i * 0.75f, this.y - 2, 0), Quaternion.identity, enemyContainer);
+			Instantiate (this.enemy, new Vector3 (i * -0.75f, this.y - 2, 0), Quaternion.identity, enemyContainer);
+
+			//Next Row
+			Instantiate (this.enemy, new Vector3 (i * 0.75f, this.y - 3, 0), Quaternion.identity, enemyContainer);
+			Instantiate (this.enemy, new Vector3 (i * -0.75f, this.y - 3, 0), Quaternion.identity, enemyContainer);
 		}
 	}
 
