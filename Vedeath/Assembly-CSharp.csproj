@@ -57,7 +57,13 @@
      <Compile Include="Assets\OSC\OSCPacket.cs" />
      <Compile Include="Assets\OSC\OSCServer.cs" />
      <Compile Include="Assets\Scripts\Bullet.cs" />
+     <Compile Include="Assets\Scripts\Enemy\Enemy_Instancing.cs" />
+     <Compile Include="Assets\Scripts\Enemy\Enemy_Movement.cs" />
+     <Compile Include="Assets\Scripts\Enemy_Container_Movement.cs" />
+     <Compile Include="Assets\Scripts\Enemy_Kill.cs" />
+     <Compile Include="Assets\Scripts\Enemy_Shooting.cs" />
      <Compile Include="Assets\Scripts\OSCHandler.cs" />
+     <Compile Include="Assets\Scripts\Player_Kill.cs" />
      <Compile Include="Assets\Scripts\PlayerController.cs" />
      <Compile Include="Assets\Scripts\Shooting.cs" />
  <Reference Include="UnityEngine.UI">

@@ -14,31 +14,8 @@ public class PlayerController : MonoBehaviour
     public float speed;
     private Rigidbody2D rb;
 
-    void Start()
-    {
-        //************* Instantiate the OSC Handler...
-        OSCHandler.Instance.Init();
-        OSCHandler.Instance.SendMessageToClient("PD", "/PD/message/oscprep", 1);
-        OSCHandler.Instance.SendMessageToClient("PD", "/PD/message/volume/dimMusic", 1);
-        OSCHandler.Instance.SendMessageToClient("PD", "/PD/message/sequencer/pulse1", 1);
-        OSCHandler.Instance.SendMessageToClient("PD", "/PD/message/sequencer/pulse2", 1);
-        OSCHandler.Instance.SendMessageToClient("PD", "/PD/message/sequencer/waveform3", 1);
-        OSCHandler.Instance.SendMessageToClient("PD", "/PD/message/sequencer/noise4", 1);
-        OSCHandler.Instance.SendMessageToClient("PD", "/PD/message/sequencer/sequencer", 1);
-        //*************
-
-
-    }
-
     void FixedUpdate()
     {
-        //************* Routine for receiving the OSC...
-        OSCHandler.Instance.UpdateLogs();
-        Dictionary<string, ServerLog> servers = new Dictionary<string, ServerLog>();
-        servers = OSCHandler.Instance.Servers;
-        //*************
-
-
         float moveHorizontal = Input.GetAxis("Horizontal");
         float moveVertical = Input.GetAxis("Vertical");
 
@@ -55,18 +32,5 @@ public class PlayerController : MonoBehaviour
         );*/
 
         //rb.rotation = Quaternion.Euler(0.0f, 0.0f, rb.velocity.x * -tilt);
-
-        if (Input.GetKeyDown(KeyCode.Mouse0))
-        {
-            shootLaserSound();
-        }
-        
     }
-    void shootLaserSound()
-    {
-        //************* Send the message to the client...
-        OSCHandler.Instance.SendMessageToClient("PD", "/PD/message/soundEffects/longLaser", "bang");
-        //*************
-    }
-
 }

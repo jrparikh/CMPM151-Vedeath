@@ -18,10 +18,8 @@ public class Shooting : MonoBehaviour
         if (Input.GetKey(KeyCode.Mouse0) && Time.time > fireRate)
         {
             fireRate = Time.time + fireSpeed;
-            GameObject clone = (GameObject)Instantiate(Projectile, transform.position, transform.rotation);
+            Instantiate(this.Projectile, this.transform.position, this.transform.rotation);
 
-            Destroy(clone, 2.0f);
-           
         }
     }
 }
