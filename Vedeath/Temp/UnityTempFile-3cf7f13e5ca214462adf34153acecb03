@@ -163,6 +163,8 @@
 -define:UNITY_EDITOR_OSX
 -define:ENABLE_NATIVE_ARRAY_CHECKS
 -define:UNITY_TEAM_LICENSE
+'Assets/Detect_Down.cs'
+'Assets/Enemy_Container_Movement.cs'
 'Assets/Scripts/Bullet.cs'
 'Assets/Scripts/Enemy/Enemy_Instancing.cs'
 'Assets/Scripts/Enemy/Enemy_Movement.cs'
