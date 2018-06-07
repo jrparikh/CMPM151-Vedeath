@@ -5,8 +5,6 @@ using UnityEngine;
 public class Bullet : MonoBehaviour {
 
     // Use this for initialization
-    
-
     public float VelX = 0f;
     public float VelY = 5f;
     Rigidbody2D rb;
@@ -22,5 +20,4 @@ public class Bullet : MonoBehaviour {
     {
         this.rb.velocity = new Vector2(VelX, VelY);
     }
-    
 }

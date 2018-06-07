@@ -53,6 +53,8 @@
   <ItemGroup>
      <Compile Include="Assets\Enemy_Container_Movement.cs" />
      <Compile Include="Assets\Enemy_Kill.cs" />
+     <Compile Include="Assets\Enemy_Shooting.cs" />
+     <Compile Include="Assets\Player_Kill.cs" />
      <Compile Include="Assets\Scripts\Bullet.cs" />
      <Compile Include="Assets\Scripts\Enemy\Enemy_Instancing.cs" />
      <Compile Include="Assets\Scripts\Enemy\Enemy_Movement.cs" />
