@@ -15,7 +15,7 @@ public class Shooting : MonoBehaviour
 
         //transform.rotation = Player.transform.rotation;
 
-        if (Input.GetKey(KeyCode.Mouse0) && Time.time > fireRate)
+        if (Input.GetKey(KeyCode.Space) && Time.time > fireRate)
         {
             fireRate = Time.time + fireSpeed;
             Instantiate(this.Projectile, this.transform.position, this.transform.rotation);

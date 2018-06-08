@@ -25,6 +25,8 @@ public class Enemy_Movement: MonoBehaviour {
 	private bool rightMove;
 	public Vector3 viewPos;
 
+    public int metro = 300;
+
 	public bool downTrue = false;
 
 	// Use this for initialization
@@ -49,7 +51,9 @@ public class Enemy_Movement: MonoBehaviour {
 			
 		// Down on Left and Right Movement
 		if (viewPos.x < leftBoundary && leftMove && !rightMove){
-			rightMove = true;
+            metro -= 25;
+            OSCHandler.Instance.SendMessageToClient("PD", "/PD/message/sequencer/metro", metro);
+            rightMove = true;
 			leftMove = false;
 			enemyContainerTransform.Translate (Vector3.down * downSpeed);
 			moveTime -= 0.05f;
@@ -58,7 +62,13 @@ public class Enemy_Movement: MonoBehaviour {
 
 		// Down on Right and Left Movement
 		if (viewPos.x > rightBoundary && rightMove && !leftMove) {
-			rightMove = false;
+            metro -= 25;
+            
+                //*************
+                OSCHandler.Instance.SendMessageToClient("PD", "/PD/message/sequencer/metro", metro);
+                //*************
+            
+            rightMove = false;
 			leftMove = true;
 			enemyContainerTransform.Translate (Vector3.down * downSpeed);
 			moveTime -= 0.05f;
