@@ -56,6 +56,7 @@
      <Compile Include="Assets\OSC\OSCMessage.cs" />
      <Compile Include="Assets\OSC\OSCPacket.cs" />
      <Compile Include="Assets\OSC\OSCServer.cs" />
+     <Compile Include="Assets\Restart.cs" />
      <Compile Include="Assets\Scripts\Bullet.cs" />
      <Compile Include="Assets\Scripts\Enemy\Enemy_Instancing.cs" />
      <Compile Include="Assets\Scripts\Enemy\Enemy_Movement.cs" />

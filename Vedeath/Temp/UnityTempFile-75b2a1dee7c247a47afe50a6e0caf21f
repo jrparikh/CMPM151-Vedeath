@@ -166,6 +166,7 @@ Assets/OSC/OSCClient.cs
 Assets/OSC/OSCMessage.cs
 Assets/OSC/OSCPacket.cs
 Assets/OSC/OSCServer.cs
+Assets/Restart.cs
 Assets/Scripts/Bullet.cs
 Assets/Scripts/Enemy/Enemy_Instancing.cs
 Assets/Scripts/Enemy/Enemy_Movement.cs

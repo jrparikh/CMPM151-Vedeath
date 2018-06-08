@@ -48,7 +48,7 @@ public class Enemy_Shooting : MonoBehaviour {
 		if (this.fire && Time.time > this.fireRate)
 		{
 			this.fireRate = Time.time + this.fireSpeed;
-			//Instantiate(this.enemyProjectile, this.transform.position, this.transform.rotation);
+			Instantiate(this.enemyProjectile, this.transform.position, this.transform.rotation);
 
 		}
 	}
